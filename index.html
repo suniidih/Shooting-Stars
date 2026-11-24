@@ -538,6 +538,11 @@ footer {
 }
 
 @media(max-width:800px) {
+    header nav {
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
     .credits {
         grid-template-columns:1fr;
         gap:1rem;
@@ -561,7 +566,7 @@ footer {
 <!-- Top bar -->
 <header><div class="wrap">
   
-  <nav aria-label="Main"><a href="#browse">Browse</a><a href="#projects">Your Projects</a><a href="#add">Add Project</a><a href="#crew">Find Crew</a><a href="#guide">Guide</a></nav>
+  <nav aria-label="Main"><a href="#browse">Browse</a><a href="#projects">Your Projects</a><a href="#add">Add Project</a><a href="#crew">Find Crew</a><a href="#guide">Guide</a><a href="about.html">About Project</a></nav>
 </div></header>
 
 <div id="v-main"><main id="top">
@@ -933,11 +938,7 @@ function wireExtra(p) {
 }
 /* Find crewCalls */
 const ROLES = ["Actor", "Director of Photography", "Editor", "Sound Designer", "Composer", "Screenwriter", "Production Designer", "Colourist", "VFX Artist", "Producer", "Other"];
-const CREW_KEY = "ss_crew", SAMPLE_CREW_CALLS = [
-    { role: "Editor", project: "Monsoon Reel 2", pay: "Paid", contact: "editor-call@example.com", details: "Looking for an editor for a 15 minute documentary. Premiere Pro preferred." },
-    { role: "Actor", project: "Last Bus", pay: "Unpaid", contact: "cast-call@example.com", details: "Two leads wanted for a short drama. Credit and footage for your showreel." },
-    { role: "Composer", project: "Static", pay: "Negotiable", contact: "music-call@example.com", details: "Need an eerie, minimal score for an 11 minute horror short." }
-];
+const CREW_KEY = "ss_crew";
 let crewCalls = (() => { try {
     return JSON.parse(localStorage.getItem(CREW_KEY)) || [];
 }
@@ -952,8 +953,8 @@ getEl("#crole").innerHTML = '<option value="">All roles</option>' + ROLES.map(r 
 getEl("#cform [name=role]").innerHTML = ROLES.map(r => `<option>${r}</option>`).join("");
 // Shows the crew calls, filtered by the selected role
 function renderCrew() {
-    const r = getEl("#crole").value, list = [...crewCalls, ...SAMPLE_CREW_CALLS].filter(c => !r || c.role === r);
-    getEl("#cgrid").innerHTML = list.length ? list.map(c => `<article class="card"><h3>${escapeHtml(c.role)}</h3><p class="meta">For “${escapeHtml(c.project)}”</p><p class="syn">${escapeHtml(c.details)}</p><p class="meta">Contact: ${escapeHtml(c.contact)}</p><div class="row"><span class="tag">${escapeHtml(c.pay)}</span>${c.id ? `<button class="rm" data-cd="${c.id}">Remove</button>` : ""}</div></article>`).join("") : '<p class="empty">No calls for this role yet.</p>';
+    const r = getEl("#crole").value, list = crewCalls.filter(c => !r || c.role === r);
+    getEl("#cgrid").innerHTML = list.length ? list.map(c => `<article class="card"><h3>${escapeHtml(c.role)}</h3><p class="meta">For “${escapeHtml(c.project)}”</p><p class="syn">${escapeHtml(c.details)}</p><p class="meta">Contact: ${escapeHtml(c.contact)}</p><div class="row"><span class="tag">${escapeHtml(c.pay)}</span>${c.id ? `<button class="rm" data-cd="${c.id}">Remove</button>` : ""}</div></article>`).join("") : '<p class="empty">No calls posted yet. Use the form below to post the first one.</p>';
 }
 getEl("#crole").onchange = renderCrew;
 getEl("#cgrid").onclick = e => { const b = e.target.closest("[data-cd]"); if (b) {
@@ -1012,5 +1013,4 @@ window.addEventListener("hashchange", route);
 </script>
 </body>
 </html>
-
 
