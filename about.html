@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About the Project | Shooting Stars</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Top bar -->
+<header><div class="wrap">
+  <a href="index.html" aria-label="Shooting Stars home"><img src=shooting-stars.png alt="Shooting Stars"></a>
+  <nav aria-label="Main"><a href="index.html#browse">Browse</a><a href="index.html#projects">Your Projects</a><a href="index.html#add">Add Project</a><a href="index.html#crew">Find Crew</a><a href="index.html#guide">Guide</a><a class="current" href="about.html" aria-current="page">About Project</a></nav>
+</div></header>
+
+<main class="about">
+<div class="wrap">
+  <a class="back" href="index.html">← Back to home</a>
+  <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:.4rem">About the Project</h1>
+  <p class="sub">Shooting Stars: a platform for independent filmmakers.</p>
+</div>
+
+<section><div class="wrap">
+  <h2>Project details</h2>
+  <div class="credits">
+    <div>
+      <h3>Made by</h3>
+      <p>Sunidhi Rathore<br><span class="reg">Registration no. 12623378</span></p>
+      <p>Megan Benny<br><span class="reg">Registration no. 12622205</span></p>
+    </div>
+    <div>
+      <h3>Submitted to</h3>
+      <p>Tarun</p>
+    </div>
+    <div>
+      <h3>Project</h3>
+      <p>CA2 project</p>
+      <p>Lovely Professional University</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>What is Shooting Stars?</h2>
+  <p>Shooting Stars is an online platform where independent filmmakers can manage their projects, track their progress and find the people they need, all in one place. It is built to feel like a simple version of what an agency does for a filmmaker, without the judgement or the hassle.</p>
+  <p>The name comes from a show about the people who work behind the screen to make a film or a show possible. The idea is that everyone has a right to be a shooting star.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>The problem it solves</h2>
+  <p>Independent filmmakers often work alone or in very small teams, and they struggle with five things:</p>
+  <ul>
+    <li><strong>Managing the work:</strong> scripts, budgets, schedules, cast and edits are spread across many places.</li>
+    <li><strong>Being seen:</strong> without a studio, it is hard for audiences to find their films.</li>
+    <li><strong>Finding people:</strong> actors, editors, composers and crew are hard to find on a small budget.</li>
+    <li><strong>Money:</strong> planning a budget and finding funding is the biggest barrier.</li>
+    <li><strong>Getting released:</strong> festivals have deadlines, fees and rules that are easy to lose track of.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Features</h2>
+  <ul>
+    <li><strong>Add and save projects</strong> with a title, genre, creator, year, synopsis and an uploaded image.</li>
+    <li><strong>Progress tracking:</strong> every step of making a film, from the idea to release, with a percentage ring for each project and rings for completed projects and average progress.</li>
+    <li><strong>Project page:</strong> open any project to update how much of the script is written, whether the cast is decided, filming, editing and more.</li>
+    <li><strong>Budget tracker:</strong> set a total, add expenses and see what is left.</li>
+    <li><strong>Festival deadlines:</strong> keep track of submissions, fees, status and days left.</li>
+    <li><strong>Feedback:</strong> keep comments from viewers and collaborators on each project.</li>
+    <li><strong>Browse movies and shows:</strong> search any title to see its image, creators, cast and synopsis.</li>
+    <li><strong>Find Crew:</strong> post a call for cast and crew, or browse calls from other filmmakers. With the free Firebase option switched on, calls are shared between all visitors.</li>
+    <li><strong>Filmmaker Guide:</strong> short notes on funding, contracts, music licences, copyright, festivals and distribution.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>How it is built</h2>
+  <ul>
+    <li><strong>HTML, CSS and JavaScript</strong> only, with no frameworks.</li>
+    <li><strong>localStorage</strong> saves projects, progress and uploaded images in the browser, so no backend is needed.</li>
+    <li><strong>data.json</strong> is a pre-filled file of sample films shown in Browse.</li>
+    <li><strong>TVMaze and OMDb APIs</strong> provide the show and movie search results.</li>
+    <li><strong>Firebase Firestore (optional)</strong> stores the shared crew calls so every visitor sees the same board.</li>
+    <li><strong>GitHub Pages</strong> hosts the finished website.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>How Find Crew works</h2>
+  <ul>
+    <li>A filmmaker fills in the role they need, the project, the pay and a contact detail, then posts the call.</li>
+    <li>Other filmmakers browse the board and filter it by role, then contact the person directly.</li>
+    <li>On its own, a static website cannot share data between visitors. In demo mode a call is saved only in the browser that posted it.</li>
+    <li>With the free Firebase option switched on, calls are stored online, so every visitor sees the same board. Posted calls cannot be edited or deleted by visitors.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Limitations and future improvements</h2>
+  <p>Projects, progress, budgets and feedback are saved only in the browser they are used in, because the site has no user accounts. A future version could add logins and a full database, so that projects and feedback could be shared too, and could link to crowdfunding and festival websites.</p>
+</div></section>
+</main>
+
+<footer>
+<div class="wrap">
+  <p class="footnote">Shooting Stars. Everyone has a right to be a shooting star. Projects are saved in this browser only.</p>
+</div>
+</footer>
+<script src="sky.js"></script>
+</body>
+</html>
