@@ -5,6 +5,7 @@ For every festival entry, the script looks at all dates written as YYYY-MM-DD
 (start date, end date, deadline, and so on) and takes the latest one as the
 day the festival ends.
 
+- No end date? The site counts the festival as running 10 days from start.
 - Latest date is today or later  -> kept (on today, or upcoming).
 - Latest date is before today    -> removed (completed).
 - Entries with no dates at all   -> kept untouched.
@@ -22,7 +23,7 @@ Or let .github/workflows/update-festivals.yml run it every day.
 import json
 import re
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 DATE_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
@@ -70,6 +71,12 @@ def ended(entry, today):
     """Return the latest date in the entry if it is before today, else None."""
     dates = []
     collect_dates(entry, dates)
+    # Same rule as the website: a festival with a start but no end date
+    # is treated as running for 10 days from its start.
+    if "start" in entry and "end" not in entry:
+        starts = []
+        collect_dates(entry["start"], starts)
+        dates += [d + timedelta(days=10) for d in starts]
     if dates and max(dates) < today:
         return max(dates)
     return None
@@ -103,6 +110,8 @@ def clean(data, today, roll):
         if not kept and entries:
             return changed, True
         entries[:] = kept
+    if changed and isinstance(data, dict) and "updated" in data:
+        data["updated"] = today.isoformat()
     return changed, False
 
 
