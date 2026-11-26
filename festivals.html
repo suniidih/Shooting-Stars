@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upcoming Film Festivals | Shooting Stars</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Top bar -->
+<header><div class="wrap">
+  <a href="index.html" aria-label="Shooting Stars home"><img src=shooting-stars.png alt="Shooting Stars"></a>
+  <nav aria-label="Main"><a href="browse.html">Browse</a><a href="projects.html">Your Projects</a><a href="add.html">Add Project</a><a href="crew.html">Find Crew</a><a href="festivals.html" class="current" aria-current="page">Festivals</a><a href="guide.html">Guide</a><a href="about.html">About Project</a></nav>
+</div></header>
+
+<main>
+<section id="festivals"><div class="wrap">
+  <h1 class="page-title">Upcoming Film Festivals</h1>
+  <p class="sub">Festivals to plan your submissions around. Always check the official website for submission rules, fees and deadlines.</p>
+  <p class="sub" id="fupdated"></p>
+  <div class="tools">
+    <input id="fq" type="search" placeholder="Search by name, city or country" aria-label="Search festivals">
+    <select id="ftype" aria-label="Type of festival"><option value="">All kinds</option><option>Features</option><option>Shorts</option><option>Documentary</option><option>Animation</option></select>
+    <select id="fproj" aria-label="Project to add festivals to"></select>
+  </div>
+  <p class="meta" id="fmsg" role="status"></p>
+  <div class="grid" id="fgrid" aria-live="polite"></div>
+</div></section>
+</main>
+
+<!-- Footer with project credits -->
+<footer>
+<div class="wrap">
+    <div class="credits">
+        <div>
+            <h3>Made by</h3>
+            <p>Sunidhi Rathore<br><span class="reg">Registration no. 12623378</span></p>
+            <p>Megan Benny<br><span class="reg">Registration no. 12622205</span></p>
+        </div>
+        <div>
+            <h3>Submitted to</h3>
+            <p>Tarun</p>
+        </div>
+        <div>
+            <h3>Project</h3>
+            <p>CA2 project</p>
+            <p>Lovely Professional University</p>
+        </div>
+    </div>
+    <p class="footnote">Shooting Stars. Everyone has a right to be a shooting star. Projects are saved in this browser only.</p>
+</div>
+</footer>
+<script src="common.js"></script>
+<script src="festivals.js"></script>
+<script src="sky.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add Project | Shooting Stars</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Top bar -->
+<header><div class="wrap">
+  <a href="index.html" aria-label="Shooting Stars home"><img src=shooting-stars.png alt="Shooting Stars"></a>
+  <nav aria-label="Main"><a href="browse.html">Browse</a><a href="projects.html">Your Projects</a><a href="add.html" class="current" aria-current="page">Add Project</a><a href="crew.html">Find Crew</a><a href="festivals.html">Festivals</a><a href="guide.html">Guide</a><a href="about.html">About Project</a></nav>
+</div></header>
+
+<main>
+<section id="add"><div class="wrap">
+  <h2>Add Project</h2>
+  <p class="sub">Save a new project, then open it to track your progress.</p>
+  <form id="form" novalidate>
+    <label class="full">Title<input name="title" maxlength="80"><span class="err" data-for="title"></span></label>
+    <label>Type<select name="type"><option>Movie</option><option>Show</option></select></label>
+    <label>Genre<select name="genre"></select><span class="err" data-for="genre"></span></label>
+    <label>Director or creator<input name="director" maxlength="60"><span class="err" data-for="director"></span></label>
+    <label>Year<input name="year" type="number" min="1990" max="2035"><span class="err" data-for="year"></span></label>
+    <label class="full">Project image<input id="img" type="file" accept="image/*"></label>
+    <label class="full">Synopsis<textarea name="synopsis" rows="4" maxlength="400"></textarea><span class="err" data-for="synopsis"></span></label>
+    <div class="full"><button class="pill" type="submit">Save project</button></div>
+    <p id="msg" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<!-- Footer with project credits -->
+<footer>
+<div class="wrap">
+    <div class="credits">
+        <div>
+            <h3>Made by</h3>
+            <p>Sunidhi Rathore<br><span class="reg">Registration no. 12623378</span></p>
+            <p>Megan Benny<br><span class="reg">Registration no. 12622205</span></p>
+        </div>
+        <div>
+            <h3>Submitted to</h3>
+            <p>Tarun</p>
+        </div>
+        <div>
+            <h3>Project</h3>
+            <p>CA2 project</p>
+            <p>Lovely Professional University</p>
+        </div>
+    </div>
+    <p class="footnote">Shooting Stars. Everyone has a right to be a shooting star. Projects are saved in this browser only.</p>
+</div>
+</footer>
+<script src="common.js"></script>
+<script src="add.js"></script>
+<script src="sky.js"></script>
+</body>
+</html>

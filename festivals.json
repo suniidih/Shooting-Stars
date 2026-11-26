@@ -1,0 +1,180 @@
+{
+  "updated": "2026-11-26",
+  "festivals": [
+    {
+      "id": "iffi-2026",
+      "name": "International Film Festival of India (IFFI), 57th edition",
+      "city": "Goa",
+      "country": "India",
+      "start": "2026-11-20",
+      "end": "2026-11-28",
+      "types": [
+        "Features",
+        "Shorts",
+        "Documentary"
+      ],
+      "website": "https://iffigoa.org",
+      "note": "Theme: Stories Without Borders."
+    },
+    {
+      "id": "iffk-2026",
+      "name": "International Film Festival of Kerala (IFFK), 31st edition",
+      "city": "Thiruvananthapuram",
+      "country": "India",
+      "start": "2026-12-11",
+      "end": "2026-12-18",
+      "types": [
+        "Features"
+      ],
+      "website": "https://iffk.in",
+      "note": "Organised by the Kerala State Chalachitra Academy."
+    },
+    {
+      "id": "kiff-2026",
+      "name": "Kolkata International Film Festival (KIFF), 32nd edition",
+      "city": "Kolkata",
+      "country": "India",
+      "start": "2026-12-16",
+      "end": "2026-12-23",
+      "types": [
+        "Features",
+        "Shorts"
+      ],
+      "website": "",
+      "note": "One of India's oldest international film festivals."
+    },
+    {
+      "id": "sundance-2027",
+      "name": "Sundance Film Festival 2027",
+      "city": "Boulder, Colorado",
+      "country": "USA",
+      "start": "2027-01-21",
+      "end": "2027-01-31",
+      "types": [
+        "Features",
+        "Shorts",
+        "Documentary"
+      ],
+      "website": "https://www.sundance.org",
+      "note": "First edition in Boulder, with online screenings from 28 to 31 January."
+    },
+    {
+      "id": "iffr-2027",
+      "name": "International Film Festival Rotterdam (IFFR) 2027",
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "start": "2027-01-28",
+      "types": [
+        "Features",
+        "Shorts"
+      ],
+      "website": "https://iffr.com",
+      "note": "Known for bold, independent and experimental cinema. End date to be confirmed on the festival website."
+    },
+    {
+      "id": "clermont-2027",
+      "name": "Clermont-Ferrand International Short Film Festival, 49th edition",
+      "city": "Clermont-Ferrand",
+      "country": "France",
+      "start": "2027-01-29",
+      "end": "2027-02-06",
+      "types": [
+        "Shorts"
+      ],
+      "website": "https://clermont-filmfest.org",
+      "note": "A leading festival for short films."
+    },
+    {
+      "id": "berlinale-2027",
+      "name": "Berlin International Film Festival (Berlinale) 2027",
+      "city": "Berlin",
+      "country": "Germany",
+      "start": "2027-02-10",
+      "end": "2027-02-21",
+      "types": [
+        "Features",
+        "Shorts",
+        "Documentary"
+      ],
+      "website": "https://www.berlinale.de",
+      "note": "The 2027 edition runs one day longer than before."
+    },
+    {
+      "id": "cphdox-2027",
+      "name": "CPH:DOX 2027",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "start": "2027-03-10",
+      "types": [
+        "Documentary"
+      ],
+      "website": "https://cphdox.dk",
+      "note": "Documentary film festival. End date to be confirmed on the festival website."
+    },
+    {
+      "id": "sxsw-2027",
+      "name": "SXSW Film Festival 2027",
+      "city": "Austin, Texas",
+      "country": "USA",
+      "start": "2027-03-15",
+      "types": [
+        "Features",
+        "Shorts",
+        "Documentary"
+      ],
+      "website": "https://www.sxsw.com",
+      "note": "End date to be confirmed on the festival website."
+    },
+    {
+      "id": "cannes-2027",
+      "name": "Cannes Film Festival, 80th edition",
+      "city": "Cannes",
+      "country": "France",
+      "start": "2027-05-11",
+      "end": "2027-05-22",
+      "types": [
+        "Features",
+        "Shorts"
+      ],
+      "website": "https://www.festival-cannes.com",
+      "note": "Anniversary edition. Check the website for submission rules."
+    },
+    {
+      "id": "docfest-2027",
+      "name": "Sheffield DocFest 2027",
+      "city": "Sheffield",
+      "country": "United Kingdom",
+      "start": "2027-06-09",
+      "types": [
+        "Documentary"
+      ],
+      "website": "https://sheffdocfest.com",
+      "note": "End date to be confirmed on the festival website."
+    },
+    {
+      "id": "annecy-2027",
+      "name": "Annecy International Animation Film Festival 2027",
+      "city": "Annecy",
+      "country": "France",
+      "start": "2027-06-13",
+      "types": [
+        "Animation"
+      ],
+      "website": "https://www.annecy.org",
+      "note": "End date to be confirmed on the festival website."
+    },
+    {
+      "id": "kviff-2027",
+      "name": "Karlovy Vary International Film Festival 2027",
+      "city": "Karlovy Vary",
+      "country": "Czech Republic",
+      "start": "2027-07-02",
+      "types": [
+        "Features",
+        "Documentary"
+      ],
+      "website": "https://www.kviff.com",
+      "note": "End date to be confirmed on the festival website."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find Crew | Shooting Stars</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Top bar -->
+<header><div class="wrap">
+  <a href="index.html" aria-label="Shooting Stars home"><img src=shooting-stars.png alt="Shooting Stars"></a>
+  <nav aria-label="Main"><a href="browse.html">Browse</a><a href="projects.html">Your Projects</a><a href="add.html">Add Project</a><a href="crew.html" class="current" aria-current="page">Find Crew</a><a href="festivals.html">Festivals</a><a href="guide.html">Guide</a><a href="about.html">About Project</a></nav>
+</div></header>
+
+<main>
+<section id="crew"><div class="wrap">
+  <h2>Find Crew</h2>
+  <p class="sub">Post a call for cast and crew, or browse calls from other filmmakers.</p>
+  <p class="sub" id="cnote"></p>
+  <div class="tools"><select id="crole" aria-label="Filter by role"></select></div>
+  <div class="grid" id="cgrid"></div>
+  <h3 style="margin:2rem 0 1rem">Post a call</h3>
+  <form id="cform" novalidate>
+    <label>Role needed<select name="role"></select></label>
+    <label>Project title<input name="project" maxlength="80"><span class="err" data-for="project"></span></label>
+    <label>Pay<select name="pay"><option>Paid</option><option>Unpaid</option><option>Negotiable</option></select></label>
+    <label>Contact (email or phone)<input name="contact" maxlength="80"><span class="err" data-for="contact"></span></label>
+    <label class="full">Details<textarea name="details" rows="3" maxlength="300"></textarea><span class="err" data-for="details"></span></label>
+    <div class="full"><button class="pill" type="submit">Post call</button></div>
+    <p id="cwarn" class="meta full"></p>
+    <p id="cmsg" class="full" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<!-- Footer with project credits -->
+<footer>
+<div class="wrap">
+    <div class="credits">
+        <div>
+            <h3>Made by</h3>
+            <p>Sunidhi Rathore<br><span class="reg">Registration no. 12623378</span></p>
+            <p>Megan Benny<br><span class="reg">Registration no. 12622205</span></p>
+        </div>
+        <div>
+            <h3>Submitted to</h3>
+            <p>Tarun</p>
+        </div>
+        <div>
+            <h3>Project</h3>
+            <p>CA2 project</p>
+            <p>Lovely Professional University</p>
+        </div>
+    </div>
+    <p class="footnote">Shooting Stars. Everyone has a right to be a shooting star. Projects are saved in this browser only.</p>
+</div>
+</footer>
+<script src="common.js"></script>
+<script src="crew.js"></script>
+<script src="sky.js"></script>
+</body>
+</html>
