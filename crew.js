@@ -3,8 +3,8 @@ const ROLES = ["Actor", "Director of Photography", "Editor", "Sound Designer", "
 
 // OPTIONAL: fill in these two lines to share crew calls with every visitor (uses a free Firebase project).
 // Leave them empty and the board runs in demo mode: calls are only saved in the visitor's own browser.
-const FIREBASE_PROJECT_ID = "";
-const FIREBASE_API_KEY = "";
+const FIREBASE_PROJECT_ID = "shooting-stars-2af48";
+const FIREBASE_API_KEY = "AIzaSyDXYt5crj0IUPYaCEX5CVaMlYBDAL4rL58";
 const sharedMode = Boolean(FIREBASE_PROJECT_ID && FIREBASE_API_KEY);
 const CREW_API = `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/crewCalls`;
 
@@ -111,3 +111,4 @@ getEl("#cform").addEventListener("submit", async (e) => {
 });
 renderCrew();
 loadSharedCalls();
+
