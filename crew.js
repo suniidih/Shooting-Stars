@@ -122,7 +122,7 @@ async function deleteSharedCall(id) {
 // Shows the crew calls, filtered by the selected role
 function renderCrew() {
     const r = getEl("#crole").value, source = sharedMode ? sharedCalls : crewCalls, list = source.filter(c => !r || c.role === r);
-    getEl("#cgrid").innerHTML = list.length ? list.map(c => `<article class="card"><h3>${escapeHtml(c.role)}</h3><p class="meta">For “${escapeHtml(c.project)}”</p><p class="syn">${escapeHtml(c.details)}</p><p class="meta">Contact: ${escapeHtml(c.contact)}</p><div class="row"><span class="tag">${escapeHtml(c.pay)}</span>${!sharedMode && c.id ? `<button class="rm" data-cd="${c.id}">Remove</button>` : ""}${sharedMode ? `<button class="rm" data-sd="${escapeHtml(c.id)}">Remove</button>` : ""}</div></article>`).join("") : '<p class="empty">No calls posted yet. Use the form below to post the first one.</p>';
+    getEl("#cgrid").innerHTML = list.length ? list.map(c => `<article class="card"><h3>${escapeHtml(c.role)}</h3><p class="meta">For “${escapeHtml(c.project)}”</p><p class="syn">${escapeHtml(c.details)}</p><p class="meta">Contact: ${escapeHtml(c.contact)}</p><div class="row"><span class="tag">${escapeHtml(c.pay)}</span>${!sharedMode && c.id ? `<button class="rm" data-cd="${c.id}">Remove</button>` : ""}${sharedMode && c.ownerId && authState && c.ownerId === authState.uid ? `<button class="rm" data-sd="${escapeHtml(c.id)}">Remove</button>` : ""}</div></article>`).join("") : '<p class="empty">No calls posted yet. Use the form below to post the first one.</p>';
 }
 getEl("#crole").onchange = renderCrew;
 getEl("#cgrid").addEventListener("click", async (e) => {
