@@ -398,6 +398,7 @@ label {
 }
 
 .step {
+    flex-direction:row;
     display:flex;
     align-items:center;
     gap:.75rem;
